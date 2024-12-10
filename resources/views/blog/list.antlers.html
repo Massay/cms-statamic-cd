@@ -1,0 +1,12 @@
+
+<div class="max-w-7xl mx-auto sm:my-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2  gap-2 sm:gap-4" >
+        {{ collection:blogs}}
+            <div class="p-8 border">
+                <img src="{{ image }}" alt="" class="overflow-hidden max-h-96 w-full rounded-md object-fill object-center">
+                <h1 class="text-lg sm:text-2xl text-center">{{ title }}</h1>
+                <p class="sm:leading-8 text-lg max-h-52">{{ content }} </p>
+            </div>
+        {{ /collection:blogs}}
+    </div>
+</div>

@@ -1,0 +1,9 @@
+tree:
+  -
+    id: 2409793d-cfa9-4367-8263-b7912826f826
+    title: Login
+    url: 'https://dev.cdcommunity.org/login'
+  -
+    id: 6ba0e128-8eff-45ce-8be0-86c7e6b5e6f3
+    title: Register
+    url: 'https://dev.cdcommunity.org/register'

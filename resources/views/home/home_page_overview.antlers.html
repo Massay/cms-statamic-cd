@@ -1,0 +1,26 @@
+{{ collection:home_page_overview }}
+<!-- Overview Section -->
+<div class="flex items-center justify-center">
+	<div class="sm:flex sm:items-start sm:gap-5 sm:px-28 sm:py-20 grid grid-cols-1 p-2">
+		<section class="sm:flex sm:h-[20rem] sm:w-1/2 sm:items-center sm:justify-center w-full grid place-content-center">
+			<img src="{{ image }}" alt="CDC LOGO" />
+		</section>
+		<section class="sm:w-1/2 w-full grid text-center">
+			<h2 class="text-2xl font-bold">{{ header_title }}</h2>
+			<div class="flex flex-col gap-10 pt-10">
+				<p>
+					{{ header_description }}
+				</p>
+				<a
+					href="/about"
+					class="shadow-glass hover:to-bluw-500 sm:relative sm:flex sm:w-fit sm:items-center sm:gap-2  rounded-full bg-gradient-to-r from-green-300 to-green-500 sm:px-5 sm:py-3 sm:text-[16px] text-sm p-2 font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4"
+					>Explore more.
+					<span
+						class="from-orange -400 absolute right-0 top-0 h-3 w-3 animate-ping rounded-full bg-gradient-to-r to-green-700"
+					></span>
+				</a>
+			</div>
+		</section>
+	</div>
+</div>
+{{ /collection:home_page_overview}}

@@ -1,0 +1,15 @@
+---
+id: 61707380-219a-4001-8ce2-0b4cdeee8467
+blueprint: our_course
+title: 'Javascript Bootcamp for Absolute Beginners'
+author: c6d53093-70a5-4010-bf84-815546e3090f
+level: 'Beginner Friendly'
+image:
+  - photo-1511467687858-23d96c32e4ae.jpeg
+duration: '1:34:23 Minutes'
+parts: '3 Parts'
+language_type: TypeScript
+url: 'https://gamcodeplus.gm'
+updated_by: c6d53093-70a5-4010-bf84-815546e3090f
+updated_at: 1733748019
+---

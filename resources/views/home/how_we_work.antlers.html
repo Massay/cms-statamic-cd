@@ -1,0 +1,30 @@
+<div class="flex items-center justify-center sm:px-32 sm:py-28 p-4">
+    {{ collection:how_we_work}}
+	<div
+		class="sm:relative sm:flex w-full  sm:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+	>
+		<div
+			class="sm:relative sm:m-0 sm:w-2/5 sm:shrink-0 sm:overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700"
+		>
+			<img
+				src="{{ image }}"
+				alt=""
+				class="h-full w-full object-cover"
+			/>
+		</div>
+		<div class="p-6">
+			<h4
+				class="text-blue-gray-900 mb-2 block text-2xl font-bold leading-snug tracking-normal antialiased"
+			>
+				{{ title}}
+			</h4>
+			<p
+				class="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased"
+			>
+				{{ content }}
+			</p>
+		</div>
+	</div>
+
+    {{ /collection:how_we_work}}
+</div>

@@ -1,0 +1,6 @@
+title: 'Empowering People Globally'
+template: empowering_people_globally/show
+revisions: false
+date_behavior:
+  past: public
+  future: private

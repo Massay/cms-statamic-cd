@@ -1,0 +1,5 @@
+title: 'How we work'
+revisions: false
+date_behavior:
+  past: public
+  future: private

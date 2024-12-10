@@ -1,0 +1,7 @@
+super: true
+id: c6d53093-70a5-4010-bf84-815546e3090f
+password_hash: $2y$12$hQ7AIFTutv51022Ihx0jyu54UyS/0tZs6P7WsE/9pytGp2dEOVzxa
+preferences:
+  collections:
+    why_choose_us:
+      after_save: create_another

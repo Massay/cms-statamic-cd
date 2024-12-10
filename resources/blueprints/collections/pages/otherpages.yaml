@@ -1,0 +1,75 @@
+title: OtherPages
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: header_title
+            field:
+              type: text
+              display: header_title
+          -
+            handle: header_description
+            field:
+              type: textarea
+              display: 'header description'
+              sortable: false
+          -
+            handle: background_image
+            field:
+              container: assets
+              type: assets
+              display: 'background image'
+              max_files: 1
+              min_files: 1
+          -
+            handle: primary_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'primary image'
+          -
+            handle: link_field
+            field:
+              collections:
+                - pages
+              type: link
+              display: 'Link Field'
+          -
+            handle: external_link
+            field:
+              inline_label: 'External Link URL'
+              inline_label_when_true: 'External Link'
+              type: toggle
+              display: 'External link'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

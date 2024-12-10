@@ -1,0 +1,55 @@
+title: Overview
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: image
+            field:
+              container: assets
+              type: assets
+              display: image
+          -
+            handle: header_title
+            field:
+              type: text
+              display: 'header title'
+          -
+            handle: header_description
+            field:
+              type: text
+              display: 'header description'
+          -
+            handle: btn_text
+            field:
+              type: text
+              display: 'btn text'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

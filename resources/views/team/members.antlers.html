@@ -1,0 +1,26 @@
+<section class="sm:py-12">
+	<div class="sm:px-28">
+		<div class="sm:pb-12 text-center">
+			<h1 class="font-heading sm:text-2xl p-4 font-bold text-gray-900">Check our awesome team members</h1>
+		</div>
+		<div class="grid grid-cols-1 sm:gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+
+            {{ collection:team_members}}
+			<div class="flex w-full flex-col items-center justify-center rounded-lg bg-white p-12">
+				<div class="mb-8">
+					<img
+						class="h-36 w-36 rounded-full object-cover object-center"
+						src="{{ image }}"
+						alt=""
+					/>
+				</div>
+				<div class="text-center">
+					<p class="mb-2 text-xl font-bold text-gray-700">{{ name }}</p>
+					<p class="text-base font-normal text-gray-400">{{ job_title }} </p>
+				</div>
+			</div>
+            {{ /collection:team_members}}
+			
+		</div>
+	</div>
+</section>

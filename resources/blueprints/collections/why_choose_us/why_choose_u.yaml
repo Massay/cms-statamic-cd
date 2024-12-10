@@ -1,0 +1,46 @@
+title: 'Why Choose u'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: why_choose_us
+            field:
+              type: section
+              display: 'Why Choose Us'
+          -
+            handle: icon
+            field:
+              type: icon
+              display: icon
+              listable: true
+          -
+            handle: header_title
+            field:
+              type: text
+              display: 'header title'
+          -
+            handle: header_description
+            field:
+              type: textarea
+              display: 'header description'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

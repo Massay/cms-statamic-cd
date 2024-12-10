@@ -1,0 +1,75 @@
+title: 'our course'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: level
+            field:
+              type: text
+              display: level
+          -
+            handle: image
+            field:
+              container: assets
+              type: assets
+              display: image
+          -
+            handle: header_description
+            field:
+              type: textarea
+              display: 'Header Description'
+          -
+            handle: duration
+            field:
+              type: text
+              display: Duration
+          -
+            handle: parts
+            field:
+              type: text
+              display: parts
+          -
+            handle: language_type
+            field:
+              type: text
+              display: 'Language Type'
+          -
+            handle: url
+            field:
+              type: text
+              display: url
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
