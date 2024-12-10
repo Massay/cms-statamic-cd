@@ -1,8 +1,8 @@
-title: Blogs
-template: default
+title: Events
+template: events/show
 layout: layout
 revisions: false
-route: '/blogs/{slug}'
+route: '/events/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

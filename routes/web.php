@@ -12,3 +12,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('masay', function(){
     return "My name is MAssay";
 });
+
+
+// Route::get('blogs/{slug}', function ($slug) {
+//     return view('blogs', ['slug' => $slug]);
+// });
