@@ -8,23 +8,38 @@
     <title>{{ title ?? site:name }}</title>
     {{ vite src="resources/js/site.js|resources/css/site.css" }}
     {{ Icon:icons }}
+
+<style>
+
+</style>
 </head>
 
-<body class="font-sans leading-normal text-gray-800 w-full">
-    <div class="min-h-screen w-full overflow-hidden">
-        
-        <nav class=" bg-emerald-900 w-full border-b border-gray-100 sm:py-4">
+<body class="font-sans leading-normal text-gray-800 w-full ">
+    <div class="min-h-screen w-full overflow-hidden relative z-10">
+
+        <nav class=" bg-emerald-900 w-full border-b border-gray-100 sm:py-4 ">
             <div class="flex justify-between h-16 ">
                 {{ partial:nav }}
             </div>
-            <!-- <div :class="{'block': true, 'hidden': false}" class="sm:hidden py-2 pb-2   flex justify-center items-center">
-                {{nav:collection:pages}}
-                <a href="{{ url }}" class=" {{  (is_current) ? 'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out' : ' inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out' }} 
-                    ">
-                    {{title}}
-                </a>
-                {{ /nav:collection:pages }}
-            </div> -->
+            <!-- :class="{'block': true, 'hidden': false}" -->
+             <div id="menu" data-open="false"  class="fixed hidden bottom-0 top-0 left-0 right-0 bg-yellow-800 w-[80%]  text-white z-40 sm:hidden md:hidden min-h-full text-center  lg:space-x-3 transition-all duration-300">
+            
+                <button id="closeMenu" data-open="false" class="xl:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                      </svg>
+                      
+                </button>
+                <ul  class="flex flex-col text-white justify-between">
+                    {{nav:collection:pages}}
+                    <a href="{{ url }}" class=" {{  (is_current) ? 'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5  focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out' : ' inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5  hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out' }} 
+                        ">
+                        {{title}}
+                    </a>
+                    {{ /nav:collection:pages }}
+                </ul>
+             </div>
+            
         </nav>
         <div>
             {{ template_content }}
@@ -33,7 +48,55 @@
     </div>
 
 
-   
+
 </body>
+
+<script>
+    // const menu = document.getElementById('menu');
+    // const menuID = document.getElementById('menuID')
+    // menu.addEventListener('click', () => {
+    //     const isOpen = menu.dataset.open === 'true';
+    //     menu.dataset.open = !isOpen;
+    //     menu.classList.toggle('left-0 w-[50%]', isOpen);
+    //     menuID.classList.toggle('left-0 w-', !isOpen);
+    // });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    const closeMenu = document.getElementById("closeMenu")
+
+    closeMenu.addEventListener('click', () => {
+        menu.classList.add('hidden');
+            menu.classList.remove('top-0', 'bottom-0', 'z-50');
+            menu.classList.add('top-full');
+            menu.classList.add('z-50');
+    })
+
+    toggleButton.addEventListener('click', () => {
+        // Check the current state
+        const isOpen = menu.dataset.open === 'true';
+
+        // Toggle the state
+        menu.dataset.open = !isOpen;
+
+        // Update classes
+        if (isOpen) {
+            menu.classList.add('hidden');
+            menu.classList.remove('top-0', 'bottom-0', 'z-50');
+            menu.classList.add('top-full');
+            menu.classList.add('z-50');
+        } else {
+            menu.classList.remove('hidden', 'top-full');
+            menu.classList.add('top-0', 'bottom-0', 'z-50');
+        }
+    });
+});
+
+ 
+</script>
 
 </html>
