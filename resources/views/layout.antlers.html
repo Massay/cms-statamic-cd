@@ -10,13 +10,12 @@
     {{ Icon:icons }}
 </head>
 
-<body class="bg-gray-100 font-sans leading-normal text-gray-800">
-    <div class="min-h-screen bg-gray-100">
-        <nav class="bg-emerald-500 border-b border-gray-100 py-4">
-            <div class="px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 ">
-                    {{ partial:nav }}
-                </div>
+<body class="font-sans leading-normal text-gray-800 w-full">
+    <div class="min-h-screen w-full overflow-hidden">
+        
+        <nav class=" bg-emerald-900 w-full border-b border-gray-100 sm:py-4">
+            <div class="flex justify-between h-16 ">
+                {{ partial:nav }}
             </div>
             <!-- <div :class="{'block': true, 'hidden': false}" class="sm:hidden py-2 pb-2   flex justify-center items-center">
                 {{nav:collection:pages}}
