@@ -5,3 +5,5 @@ preferences:
   collections:
     why_choose_us:
       after_save: create_another
+    membership_packages:
+      after_save: create_another
