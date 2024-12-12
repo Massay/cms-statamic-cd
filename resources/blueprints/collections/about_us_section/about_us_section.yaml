@@ -1,0 +1,109 @@
+title: 'About Us Section'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: vision
+            field:
+              type: textarea
+              display: vision
+          -
+            handle: mission
+            field:
+              type: textarea
+              display: mission
+          -
+            handle: stats
+            field:
+              type: replicator
+              display: stats
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: name
+                          field:
+                            type: text
+                            display: name
+                        -
+                          handle: value
+                          field:
+                            type: text
+                            display: value
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            handle: image_2
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'image 2'
+          -
+            handle: second_title
+            field:
+              type: text
+              display: 'Second title'
+          -
+            handle: second_content
+            field:
+              type: textarea
+              display: 'Second Content'
+          -
+            handle: first_url
+            field:
+              type: link
+              display: 'First Url'
+              listable: true
+          -
+            handle: second_url
+            field:
+              type: link
+              display: 'Second Url'
+              listable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
