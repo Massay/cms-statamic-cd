@@ -1,0 +1,40 @@
+title: 'Partner Section'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: list
+            field:
+              collections:
+                - partners
+              type: entries
+              display: list
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

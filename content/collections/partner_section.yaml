@@ -1,0 +1,5 @@
+title: 'Partner Section'
+revisions: false
+date_behavior:
+  past: public
+  future: private

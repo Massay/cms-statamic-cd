@@ -9,3 +9,5 @@ preferences:
       after_save: continue_editing
     community_member_images:
       after_save: create_another
+    partner_section:
+      after_save: create_another

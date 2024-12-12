@@ -1,9 +1,9 @@
 ---
 id: bb6659be-351e-466c-9167-0dcfb1980083
-blueprint: otherpages
+blueprint: pages
 title: Partnership
 author: c6d53093-70a5-4010-bf84-815546e3090f
-template: other_pages
+template: partnership
 updated_by: c6d53093-70a5-4010-bf84-815546e3090f
 updated_at: 1733582390
 header_title: Partnership
