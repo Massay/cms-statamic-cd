@@ -9,28 +9,16 @@
 			</a>
 		</div>
 		<div class="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+			{{ collection:membership_categories}}
 			<div class="rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-4 text-xl font-bold text-green-900">Join/Renew</h2>
+				<h2 class="mb-4 text-xl font-bold text-green-900">{{ title }}</h2>
 				<p class="text-gray-700">
-					General Members comprise of the executive and official members, who can elect or nominate
-					members to be elected.
+					{{content}}
 				</p>
 			</div>
-			<div class="rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-4 text-xl font-bold text-green-900">Official Member</h2>
-				<p class="text-gray-700">
-					Official members are members who contribute towards their membership based on the amount
-					set by the community at a particular time; membership contributions provide them access to
-					privileges not available to the general members.
-				</p>
-			</div>
-			<div class="rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-4 text-xl font-bold text-green-900">Nominated Member</h2>
-				<p class="text-gray-700">
-					Informal members are members of the organization who share the same interest and
-					participate in the organization's events and activities
-				</p>
-			</div>
+			{{ /collection:membership_categories}}
+			
 		</div>
 	</div>
 </div>
