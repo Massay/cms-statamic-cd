@@ -1,37 +1,27 @@
+{{ collection:join_our_community}}
 <div class="bg-white">
 	<div class="mx-auto pt-16 sm:px-6 lg:px-8">
 		<div class="relative isolate overflow-hidden px-28 sm:py-24 text-center sm:rounded-3xl">
 			<h2 class="mx-auto max-w-2xl text-lg font-bold uppercase tracking-wide sm:text-2xl">
-				Join our community now
+				{{ title}}
 			</h2>
 			<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-				Experience the benefits of our community. No obligations, just join and explore.
+				{{ content }}
 			</p>
 			<div class="isolate mt-8 flex items-center justify-center sm:-space-x-2 sm:overflow-hidden">
+				{{ members}}
 				<img
-					class="relative z-30 inline-block h-10 w-10 rounded-full ring-2 ring-white"
-					src="https://randomuser.me/api/portraits/men/34.jpg"
-					alt=""
-				/>
-				<img
-					class="relative z-20 inline-block h-10 w-10 rounded-full ring-2 ring-white"
-					src="https://randomuser.me/api/portraits/women/2.jpg"
-					alt=""
-				/>
-				<img
-					class="relative z-10 inline-block h-10 w-10 rounded-full ring-2 ring-white"
-					src="https://randomuser.me/api/portraits/women/3.jpg"
-					alt=""
-				/>
-				<img
-					class="relative z-0 inline-block h-10 w-10 rounded-full ring-2 ring-white"
-					src="https://randomuser.me/api/portraits/men/4.jpg"
-					alt=""
-				/>
+				class="relative z-30 inline-block h-10 w-10 rounded-full ring-2 ring-white"
+				src="{{ image}}"
+				alt=""
+			/>
+				{{ /members}}
+				
+				
 				<span class="!ml-2 font-bold italic text-green-500">Join these awesome members</span>
 			</div>
 			<div class="mt-12 flex items-center justify-center gap-x-6 py-2">
-				<a href="/cdc_membership">
+				<a href="{{ url_link }}">
 					<button
 						type="button"
 						class="shadow-glass hover:to-bluw-500 relative flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-green-300 to-green-500 px-5 py-3 text-[16px] font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4"
@@ -80,3 +70,6 @@
 		</div>
 	</div>
 </div>
+
+
+{{ /collection:join_our_community}}

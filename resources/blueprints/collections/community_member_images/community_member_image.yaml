@@ -1,4 +1,4 @@
-title: 'Membership Package'
+title: 'Community Member Image'
 tabs:
   main:
     display: Main
@@ -13,21 +13,6 @@ tabs:
               validate:
                 - required
           -
-            handle: name
-            field:
-              type: text
-              display: name
-          -
-            handle: fee
-            field:
-              type: text
-              display: fee
-          -
-            handle: resources
-            field:
-              type: list
-              display: resources
-          -
             handle: author
             field:
               type: users
@@ -36,16 +21,13 @@ tabs:
               localizable: true
               max_items: 1
           -
-            handle: is_popular
+            handle: image
             field:
-              type: toggle
-              display: 'Is Popular'
-          -
-            handle: link_url
-            field:
-              type: link
-              display: Url
-              listable: true
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: image
   sidebar:
     display: Sidebar
     sections:

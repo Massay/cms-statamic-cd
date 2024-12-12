@@ -6,4 +6,6 @@ preferences:
     why_choose_us:
       after_save: create_another
     membership_packages:
+      after_save: continue_editing
+    community_member_images:
       after_save: create_another

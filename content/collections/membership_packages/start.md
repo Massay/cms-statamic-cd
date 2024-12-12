@@ -11,5 +11,8 @@ resources:
   - 'Viewing courses avalaible'
 author: c6d53093-70a5-4010-bf84-815546e3090f
 updated_by: c6d53093-70a5-4010-bf84-815546e3090f
-updated_at: 1733990650
+updated_at: 1733992105
+is_popular: false
+url: dev.cdcommunity.org/register
+link_url: 'https://dev.cdcommunity.org/register'
 ---

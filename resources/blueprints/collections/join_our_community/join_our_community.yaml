@@ -1,4 +1,4 @@
-title: 'Membership Package'
+title: 'Join Our Community'
 tabs:
   main:
     display: Main
@@ -13,20 +13,19 @@ tabs:
               validate:
                 - required
           -
-            handle: name
+            handle: content
             field:
-              type: text
-              display: name
+              type: markdown
+              display: Content
+              localizable: true
           -
-            handle: fee
+            handle: members
             field:
-              type: text
-              display: fee
-          -
-            handle: resources
-            field:
-              type: list
-              display: resources
+              collections:
+                - community_member_images
+              type: entries
+              display: members
+              listable: true
           -
             handle: author
             field:
@@ -36,15 +35,10 @@ tabs:
               localizable: true
               max_items: 1
           -
-            handle: is_popular
-            field:
-              type: toggle
-              display: 'Is Popular'
-          -
-            handle: link_url
+            handle: url_link
             field:
               type: link
-              display: Url
+              display: 'url link'
               listable: true
   sidebar:
     display: Sidebar

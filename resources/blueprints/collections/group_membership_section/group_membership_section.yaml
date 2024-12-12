@@ -1,4 +1,4 @@
-title: 'Membership Package'
+title: 'Group Membership Section'
 tabs:
   main:
     display: Main
@@ -13,20 +13,29 @@ tabs:
               validate:
                 - required
           -
-            handle: name
+            handle: header_title
             field:
               type: text
-              display: name
+              display: 'Header Title'
           -
-            handle: fee
+            handle: header_description
             field:
-              type: text
-              display: fee
+              type: textarea
+              display: 'Header Description'
           -
-            handle: resources
+            handle: image
             field:
-              type: list
-              display: resources
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            handle: url_link
+            field:
+              type: link
+              display: 'Url link'
+              listable: true
           -
             handle: author
             field:
@@ -35,17 +44,6 @@ tabs:
               default: current
               localizable: true
               max_items: 1
-          -
-            handle: is_popular
-            field:
-              type: toggle
-              display: 'Is Popular'
-          -
-            handle: link_url
-            field:
-              type: link
-              display: Url
-              listable: true
   sidebar:
     display: Sidebar
     sections:

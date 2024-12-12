@@ -1,0 +1,5 @@
+title: 'Join Our Community'
+revisions: false
+date_behavior:
+  past: public
+  future: private
