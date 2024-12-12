@@ -1,9 +1,9 @@
 ---
 id: 39c58213-0b64-491e-98f9-4bdc86d09e81
-blueprint: otherpages
+blueprint: pages
 title: 'Professional Development'
 author: c6d53093-70a5-4010-bf84-815546e3090f
-template: other_pages
+template: professonal-development
 updated_by: c6d53093-70a5-4010-bf84-815546e3090f
 updated_at: 1733583038
 header_title: 'Study with the CDC Academy'

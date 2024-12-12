@@ -1,0 +1,5 @@
+title: 'Two Columns Image Text Section'
+revisions: false
+date_behavior:
+  past: public
+  future: private
