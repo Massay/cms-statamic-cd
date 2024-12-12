@@ -1,6 +1,6 @@
 ---
 id: 7eff57ea-1f49-48c9-999f-945e9e5ffc50
-blueprint: pages
+blueprint: otherpages
 title: Membership
 author: c6d53093-70a5-4010-bf84-815546e3090f
 template: membership

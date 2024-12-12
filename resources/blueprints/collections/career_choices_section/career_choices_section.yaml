@@ -1,4 +1,4 @@
-title: Course
+title: 'Career Choices Section'
 tabs:
   main:
     display: Main
@@ -13,29 +13,6 @@ tabs:
               validate:
                 - required
           -
-            handle: level
-            field:
-              type: text
-              display: level
-          -
-            handle: header_title
-            field:
-              type: text
-              display: 'Header Title'
-          -
-            handle: header_description
-            field:
-              type: textarea
-              display: 'Header Description'
-          -
-            handle: image
-            field:
-              container: assets
-              type: assets
-              display: Image
-              max_files: 1
-              min_files: 1
-          -
             handle: author
             field:
               type: users
@@ -43,6 +20,19 @@ tabs:
               default: current
               localizable: true
               max_items: 1
+          -
+            handle: header_title
+            field:
+              type: text
+              display: 'Header Title'
+          -
+            handle: entries_field
+            field:
+              collections:
+                - careers
+              type: entries
+              display: 'Entries Field'
+              max_items: 3
   sidebar:
     display: Sidebar
     sections:

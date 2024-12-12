@@ -1,0 +1,36 @@
+<section class="md:mb-12 md:mt-12 px-4">
+	<article class="flex flex-col items-center justify-center gap-4 md:px-28 md:pt-10">
+		<h2 class="border-b-2 border-green-500 px-3 pb-2 md:text-2xl text-lg font-bold">OUR POPULAR COURSES</h2>
+		<section class="mt-5 flex w-full flex-row flex-wrap items-center justify-center gap-8">
+
+            {{ collection:courses}}
+            <article
+            class="group relative md:w-[20rem] w-full transform overflow-hidden rounded-lg bg-white shadow-lg duration-200 hover:shadow-2xl"
+        >
+            <div class="relative h-80 w-full md:h-64 lg:h-44">
+              
+                <img
+                    src="{{ image }}"
+                    alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                    class="h-full w-full object-cover object-center"
+                />
+            </div>
+            <div class="px-3 py-4">
+                <h3 class="pb-2 text-sm text-gray-500">
+                    <a class="rounded-lg bg-green-600 px-2 py-1 text-white" href="#!">
+                        <span class="absolute inset-0"></span>
+                        {{ level }}
+                    </a>
+                </h3>
+                <p class="group-hover:text-greem-600 text-gray-90n text-base font-semibold">
+                    {{ header_description }}
+                </p>
+            </div>
+        </article>
+  
+{{ /collection:courses}}
+			
+			
+		</section>
+	</article>
+</section>

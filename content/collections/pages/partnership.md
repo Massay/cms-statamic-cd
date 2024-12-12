@@ -1,6 +1,6 @@
 ---
 id: bb6659be-351e-466c-9167-0dcfb1980083
-blueprint: pages
+blueprint: otherpages
 title: Partnership
 author: c6d53093-70a5-4010-bf84-815546e3090f
 template: partnership

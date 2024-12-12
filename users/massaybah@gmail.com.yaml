@@ -11,3 +11,7 @@ preferences:
       after_save: create_another
     partner_section:
       after_save: create_another
+    courses:
+      after_save: create_another
+    careers:
+      after_save: create_another

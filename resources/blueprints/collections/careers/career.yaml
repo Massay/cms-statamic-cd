@@ -1,4 +1,4 @@
-title: Course
+title: Career
 tabs:
   main:
     display: Main
@@ -13,11 +13,6 @@ tabs:
               validate:
                 - required
           -
-            handle: level
-            field:
-              type: text
-              display: level
-          -
             handle: header_title
             field:
               type: text
@@ -25,16 +20,8 @@ tabs:
           -
             handle: header_description
             field:
-              type: textarea
+              type: text
               display: 'Header Description'
-          -
-            handle: image
-            field:
-              container: assets
-              type: assets
-              display: Image
-              max_files: 1
-              min_files: 1
           -
             handle: author
             field:
@@ -43,6 +30,19 @@ tabs:
               default: current
               localizable: true
               max_items: 1
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: image
+          -
+            handle: tag
+            field:
+              type: text
+              display: tag
   sidebar:
     display: Sidebar
     sections:
