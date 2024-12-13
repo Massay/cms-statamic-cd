@@ -22,13 +22,12 @@
                 {{ partial:nav }}
             </div>
             <!-- :class="{'block': true, 'hidden': false}" -->
-             <div id="menu" data-open="false"  class="fixed hidden bottom-0 top-0 left-0 right-0 bg-yellow-800 w-[60%]  text-white z-40 sm:hidden md:hidden min-h-full text-center  lg:space-x-3 transition-all duration-300">
+             <div id="menu" data-open="false"  class="fixed hidden bottom-0 top-0 left-0 right-0 bg-yellow-800 w-[60%]  text-white z-40  min-h-full text-center  lg:space-x-3 transition-all duration-300">
             
                 <button id="closeMenu" data-open="false" class="xl:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                       </svg>
-                      
                 </button>
                 <ul  class="flex flex-col text-white justify-between">
                     {{nav:collection:pages}}
