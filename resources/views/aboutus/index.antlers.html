@@ -1,7 +1,7 @@
 {{ collection:about_us_section}}
 
 <div class="flex w-full items-center justify-center">
-	<div class="flex w-full flex-wrap items-center justify-between px-36 py-20">
+	<div class="grid grid-cols-1 sm:flex w-full sm:flex-wrap sm:items-center sm:justify-between sm:px-36 sm:py-20">
 		{{ stats}}
 		<section class="flex flex-col items-center justify-center">
 			<span class="text-lg font-bold">{{name}}</span>
@@ -11,7 +11,7 @@
 	</div>
 </div>
 
-<div class="flex flex-wrap items-center justify-center gap-10 px-28 py-16">
+<div class="flex flex-wrap items-center justify-center gap-10 sm:px-28 sm:py-16 p-2">
 	<section
 		class="flex w-[25rem] cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-green-500 p-5 shadow-lg hover:shadow-2xl"
 	>
@@ -80,17 +80,18 @@
 
 
 
-<div class="flex w-full items-center justify-between gap-5 rounded-md px-28 py-10">
-	<section class="whoweare-t flex w-1/2 items-center justify-center">
+<div class="sm:flex w-full sm:items-center sm:justify-between sm:gap-5 gap-2 rounded-md sm:px-28 sm:py-10 p-2">
+	<section class="sm:flex sm:w-1/2 w-full items-center justify-center">
 		
 		<img
 			src="{{ image }}"
+			class="rounded-sm"
 			alt="CDC LOGO"
 		/>
 	</section>
-	<section class="w-1/2">
-		<h2 class="text-2xl font-bold">{{ title }} </h2>
-		<div class="flex flex-col gap-10 pt-10">
+	<section class="sm:w-1/2 w-full">
+		<h2 class="sm:text-2xl text-lg font-bold">{{ title }} </h2>
+		<div class="flex flex-col gap-2 sm:gap-10 sm:pt-10 py-2">
 			<div>
 				<p>
 					{{ content }}
@@ -98,7 +99,7 @@
 			</div>
 			<a
 				href="/case-studies"
-				class="shadow-glass hover:to-bluw-500 relative flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-green-300 to-green-500 px-5 py-3 text-[16px] font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4"
+				class="shadow-glass my-2 hover:to-bluw-500 relative flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-green-300 to-green-500 sm:px-5 sm:py-3 sm:text-[16px] text-[10px] font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4"
 				>Explore our case studies.
 				<span
 					class="from-orange -400 absolute right-0 top-0 h-3 w-3 animate-ping rounded-full bg-gradient-to-r to-green-700"
@@ -110,18 +111,16 @@
 
 
 
-<div class="flex items-start justify-center gap-5 rounded-md bg-gradient-to-t from-[#6accaf] py-16">
-	<div class="flex items-start justify-between px-28">
-		<section class="flex w-1/2 flex-col gap-8">
+<div class="sm:flex sm:items-start sm:justify-center sm:gap-5 rounded-md bg-gradient-to-t from-[#6accaf] sm:py-16 p-2">
+	<div class="sm:flex sm:items-start grid grid-cols-1 gap-2 sm:justify-between sm:px-28 p-2">
+		<section class="flex sm:w-1/2 flex-col gap-2 sm:gap-8">
 			<a href="#!" class="text-2xl font-bold hover:underline"> {{second_title}} </a>
 			<p>
-				{{ second_content}}
-				
-				
+				{{ second_content}}				
 			</p>
 			<a
 				href="#!"
-				class="shadow-glass hover:to-bluw-500 relative flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-green-300 to-green-500 px-5 py-3 text-[16px] font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4"
+				class="shadow-glass hover:to-bluw-500 relative flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-green-300 to-green-500 px-5 py-3 sm:text-[16px] text-[10px] font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4"
 				>Explore the role of the CDC.
 				<span
 					class="from-orange -400 absolute right-0 top-0 h-3 w-3 animate-ping rounded-full bg-gradient-to-r to-green-700"
