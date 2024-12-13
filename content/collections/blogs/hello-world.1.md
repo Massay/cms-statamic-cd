@@ -5,6 +5,7 @@ title: 'Hello world'
 author: c6d53093-70a5-4010-bf84-815546e3090f
 image: pexels-photo-57690.webp
 updated_by: c6d53093-70a5-4010-bf84-815546e3090f
-updated_at: 1733820174
+updated_at: 1734082014
+template: blogs/show
 ---
 This is a test
