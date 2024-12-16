@@ -1,0 +1,5 @@
+title: "Here's what our Partner say"
+revisions: false
+date_behavior:
+  past: public
+  future: private

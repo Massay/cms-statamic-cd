@@ -9,9 +9,16 @@
     {{ vite src="resources/js/site.js|resources/css/site.css" }}
     {{ Icon:icons }}
 
-<style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-</style>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/accordion@3.0.2/src/accordion.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/accordion@3.0.2/src/accordion.min.css"> -->
+
+    
 </head>
 
 <body class="font-sans leading-normal text-gray-800 w-full ">
@@ -22,14 +29,16 @@
                 {{ partial:nav }}
             </div>
             <!-- :class="{'block': true, 'hidden': false}" -->
-             <div id="menu" data-open="false"  class="fixed hidden bottom-0 top-0 left-0 right-0 bg-yellow-800 w-[60%]  text-white z-40  min-h-full text-center  lg:space-x-3 transition-all duration-300">
-            
+            <div id="menu" data-open="false"
+                class="fixed hidden bottom-0 top-0 left-0 right-0 bg-yellow-800 w-[60%]  text-white z-40  min-h-full text-center  lg:space-x-3 transition-all duration-300">
+
                 <button id="closeMenu" data-open="false" class="xl:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                      </svg>
+                    </svg>
                 </button>
-                <ul  class="flex flex-col text-white justify-between">
+                <ul class="flex flex-col text-white justify-between">
                     {{nav:collection:pages}}
                     <a href="{{ url }}" class=" py-4 justify-between max-h-screen {{  (is_current) ? 'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5  focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out' : ' inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5  hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out' }} 
                         ">
@@ -37,8 +46,8 @@
                     </a>
                     {{ /nav:collection:pages }}
                 </ul>
-             </div>
-            
+            </div>
+
         </nav>
         <div>
             {{ template_content }}
@@ -51,6 +60,9 @@
 </body>
 
 <script>
+
+
+  
     // const menu = document.getElementById('menu');
     // const menuID = document.getElementById('menuID')
     // menu.addEventListener('click', () => {
@@ -63,39 +75,119 @@
 
 
     document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+        const toggleButton = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
 
-    const closeMenu = document.getElementById("closeMenu")
+        const closeMenu = document.getElementById("closeMenu")
 
-    closeMenu.addEventListener('click', () => {
-        menu.classList.add('hidden');
-            menu.classList.remove('top-0', 'bottom-0', 'z-50');
-            menu.classList.add('top-full');
-            menu.classList.add('z-50');
-    })
-
-    toggleButton.addEventListener('click', () => {
-        // Check the current state
-        const isOpen = menu.dataset.open === 'true';
-
-        // Toggle the state
-        menu.dataset.open = !isOpen;
-
-        // Update classes
-        if (isOpen) {
+        closeMenu.addEventListener('click', () => {
             menu.classList.add('hidden');
             menu.classList.remove('top-0', 'bottom-0', 'z-50');
             menu.classList.add('top-full');
             menu.classList.add('z-50');
-        } else {
-            menu.classList.remove('hidden', 'top-full');
-            menu.classList.add('top-0', 'bottom-0', 'z-50');
-        }
-    });
-});
+        })
 
- 
+        toggleButton.addEventListener('click', () => {
+            // Check the current state
+            const isOpen = menu.dataset.open === 'true';
+
+            // Toggle the state
+            menu.dataset.open = !isOpen;
+
+            // Update classes
+            if (isOpen) {
+                menu.classList.add('hidden');
+                menu.classList.remove('top-0', 'bottom-0', 'z-50');
+                menu.classList.add('top-full');
+                menu.classList.add('z-50');
+            } else {
+                menu.classList.remove('hidden', 'top-full');
+                menu.classList.add('top-0', 'bottom-0', 'z-50');
+            }
+        });
+    });
+
+
+
+    // jQuery(document).ready(function($){
+    //     $("#my-accordion").accordionjs();
+    // });
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const accordion = new Accordion('.accordion', {
+    //         // Optional configuration
+    //         openAll: false, // Allows all sections to be open at once
+    //         closeOthers: true, // Close others when one is opened
+    //         transitionDuration: 300, // Duration for the transition effect
+    //     });
+    // });
+
+    // document.querySelectorAll('.accordion-button').forEach(button => {
+    //     button.addEventListener('click', function() {
+    //         const target = document.querySelector(button.getAttribute('data-bs-target'));
+    //         const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    //         // Toggle the "aria-expanded" attribute
+    //         button.setAttribute('aria-expanded', !isExpanded);
+
+    //         // Add/remove the 'max-h-0' and 'max-h-[500px]' classes based on expanded state
+    //         if (isExpanded) {
+    //             target.classList.remove('max-h-[500px]');  // Collapse
+    //             target.classList.add('max-h-0');  // Collapse
+    //         } else {
+    //             target.classList.remove('max-h-0');  // Expand
+    //             target.classList.add('max-h-[500px]');  // Expand
+    //         }
+
+    //         // Close other accordions (optional)
+    //         document.querySelectorAll('.accordion-collapse').forEach(panel => {
+    //             if (panel !== target) {
+    //                 panel.classList.remove('max-h-[500px]');
+    //                 panel.classList.add('max-h-0');
+    //                 panel.previousElementSibling.querySelector('.accordion-button').setAttribute('aria-expanded', 'false');
+    //             }
+    //         });
+    //     });
+    // });
+
+    // document.querySelectorAll('.accordion-button').forEach(button => {
+    //     button.addEventListener('click', () => {
+    //         const target = document.querySelector(button.getAttribute('data-bs-target'));
+    //         const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    //         // Toggle the "aria-expanded" attribute
+    //         button.setAttribute('aria-expanded', !isExpanded);
+
+    //         // Toggle the content visibility with a smooth transition
+    //         if (isExpanded) {
+    //             target.classList.remove('max-h-[500px]');  // Adjust based on content size
+    //             target.classList.add('max-h-0');
+    //         } else {
+    //             target.classList.remove('max-h-0');
+    //             target.classList.add('max-h-[500px]');  // Adjust based on content size
+    //         }
+    //     });
+    // });
+
+    // document.querySelectorAll('.accordion-button').forEach(button => {
+    //     button.addEventListener('click', () => {
+    //         const target = document.querySelector(button.getAttribute('data-bs-target'));
+    //         const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    //         // Toggle the "aria-expanded" attribute
+    //         button.setAttribute('aria-expanded', !isExpanded);
+
+    //         // Toggle the content visibility with a smooth transition
+    //         if (isExpanded) {
+    //             target.classList.remove('max-h-[500px]');  // Adjust based on content size
+    //             target.classList.add('max-h-0');
+    //         } else {
+    //             target.classList.remove('max-h-0');
+    //             target.classList.add('max-h-[500px]');  // Adjust based on content size
+    //         }
+    //     });
+    // });
 </script>
+
 
 </html>

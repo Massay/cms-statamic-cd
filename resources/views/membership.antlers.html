@@ -41,6 +41,48 @@
 
 {{ partial:membership/become_a_member}}
 
+{{ collection:about_us_section}}
+<section class="w-full text-center mx-2 my-12">
+	<div class="max-w-7xl mx-auto">
+		<h2 class="border-b-2 border-green-500 pb-2 text-2xl font-bold">
+			{{ structure_that_cdc_is_built_on_title }}
+		</h2>
+		<p class="pt-5">
+			{{ structure_that_cdc_is_built_on_description }}
+		</p>
+
+		<div class="accordion w-full max-w-7xl mt-7 mx-auto flex flex-col gap-1">
+			{{ structure_that_cdc_is_built_on}}
+			<!-- Accordion Item 1 -->
+			<div class="accordion-item border-b">
+				<h2 class="accordion-header ">
+					<label for="section-structure_that_cdc_is_built_on-{{ index }}"
+						class="accordion-button flex items-center justify-between w-full p-4 text-lg font-semibold text-gray-700 bg-gray-100  rounded-md cursor-pointer">
+						{{title}}
+						<svg class="w-5 h-5 transform transition-transform duration-200 rotate-0 group-open:rotate-180"
+							xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+							</path>
+						</svg>
+					</label>
+				</h2>
+				<input type="checkbox" id="section-structure_that_cdc_is_built_on-{{ index }}" class="hidden peer" />
+				<div
+					class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
+					<p class="p-4 text-gray-600">{{ content}}</p>
+				</div>
+			</div>
+
+			{{ /structure_that_cdc_is_built_on}}
+		</div>
+	</div>
+
+</section>
+
+{{ /collection:about_us_section}}
+
+{{ partial:paymentmethods }}
+
 {{ partial:membership/group_membership}}
 
 {{ partial:membership/Join_our_community}}

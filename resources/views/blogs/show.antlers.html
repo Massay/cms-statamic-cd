@@ -1,11 +1,23 @@
 <div class="max-w-7xl mx-auto">
 
     <!-- {{ slug }} -->
-    <h1 class="text-lg sm:text-2xl text-center">{{ title }}</h1>
+    <h1 class="text-lg font-extrabold py-4 sm:text-2xl text-center">{{ title }}</h1>
 
     <div class="p-8">
-        <img src="{{ image }}" alt="" class="overflow-hidden max-h-96 w-full rounded-md object-fill object-center">
-        <p class="sm:leading-8 text-lg max-h-52">{{ content }} </p>
+        <div class="h-[3%] mx-auto w-[60%]">
+            <img src="{{ image }}" alt="" class=" rounded-md object-fill object-center">
+
+            <div>
+
+                <p class="sm:leading-8 text-lg">{{ content }} </p>
+                <span class="text-gray-900">{{ author }}</span>
+                <span class="text-gray-900">{{ date }}</span>
+            </div>
+
+        </div>
+       
+       
+
     
     </div>
 </div>

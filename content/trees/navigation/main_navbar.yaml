@@ -20,9 +20,13 @@ tree:
     title: Blogs
     url: blogs
   -
+    id: 07a4a8a4-4381-4735-a082-9cf46dcc0fe4
+    title: 'Resources & Tools'
+    url: resources-and-tools
+  -
     id: 7d5e4afd-eab2-41b8-8af5-d30e8a642da1
-    title: Events
-    url: events
+    title: 'News and Events'
+    url: news-and-events
   -
     id: 41bac0b8-f80f-4744-a1f4-0ea164c69404
     title: 'Our Team'

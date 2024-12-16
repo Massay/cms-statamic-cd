@@ -1,0 +1,32 @@
+<div class="flex items-center justify-center dark:bg-gray-900">
+    <div class="sm:px-28 sm:py-20">
+        <div class="container mx-auto flex w-full flex-col items-center justify-center p-6 text-center xl:px-0">
+            <h2
+                class="mt-3 max-w-2xl text-2xl font-bold leading-snug tracking-tight text-gray-800 dark:text-white lg:text-2xl lg:leading-tight">
+                Here's what our Partner say
+            </h2>
+        </div>
+        <div class="container mx-auto mb-10 p-6 xl:px-0">
+            <div class="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
+                {{ collection:heres_what_our_partner_say}}
+                <div class="lg:col-span-2 xl:col-auto">
+                    <div
+                        class="dark:bg-trueGray-800 flex h-auto w-full flex-col justify-start gap-5 rounded-2xl bg-gray-100 px-6 py-6 dark:bg-gray-800 md:px-5 md:py-5">
+
+                        {{ content }}
+                        <div class="mt-4 flex items-center space-x-1">
+                            <div class="h-14 w-14 flex-shrink-0 overflow-hidden rounded-full">
+                                <img alt="Avatar" src="{{ image}}" loading="lazy" />
+                            </div>
+                            <div>
+                                <div class="text-lg font-medium text-gray-600 dark:text-gray-400">{{ name }}</div>
+                                <div class="text-gray-600 dark:text-gray-400">{{ position}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ /collection:heres_what_our_partner_say}}
+            </div>
+        </div>
+    </div>
+</div>

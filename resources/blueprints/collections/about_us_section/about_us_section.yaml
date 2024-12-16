@@ -96,6 +96,60 @@ tabs:
               type: link
               display: 'Second Url'
               listable: true
+          -
+            handle: replicator_field
+            field:
+              type: replicator
+              display: 'Our values'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: Title
+                        -
+                          handle: content
+                          field:
+                            type: textarea
+                            display: Content
+          -
+            handle: structure_that_cdc_is_built_on
+            field:
+              type: replicator
+              display: 'Structure that CDC is Built on'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: Title
+                        -
+                          handle: content
+                          field:
+                            type: textarea
+                            display: Content
+          -
+            handle: structure_that_cdc_is_built_on_title
+            field:
+              type: text
+              display: 'Structure that CDC is Built on Title'
+          -
+            handle: structure_that_cdc_is_built_on_description
+            field:
+              type: markdown
+              display: 'Structure that CDC is Built on Description'
   sidebar:
     display: Sidebar
     sections:
