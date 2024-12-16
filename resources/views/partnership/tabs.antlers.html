@@ -1,11 +1,10 @@
 <div class="tabs" class="w-full">
 
-
     <div class="w-full sm:max-w-3xl mx-auto">
-        <div class="flex items-center justify-center gap-5 rounded-full border-2 border-green-500 p-2" id="tab-buttons">
+        <div class="flex  items-center justify-center sm:gap-5 rounded-full border-2 border-green-500 sm:p-2" id="tab-buttons">
             {{ collection:partnership_tiers}}
             <button
-                class="tab-btn py-2 px-4 text-gray-600 rounded-full  border-transparent {{ if index == 0 }} active bg-emerald-400 {{/if}} hover:border-blue-600  "
+                class="tab-btn py-2 sm:px-4 max-w-[20%] text-xs px-1 sm:text-lg lg:text-2xl text-gray-600 rounded-full  border-transparent {{ if index == 0 }} active bg-emerald-400 {{/if}} hover:border-blue-600  "
                 data-tab="tab{{index}}">{{ name }}</button>
 
             {{ /collection:partnership_tiers}}
@@ -19,11 +18,11 @@
         {{ collection:partnership_tiers}}
         {{ if index % 2 == 0 }}
         <div class="tab-content p-4   {{ if index == 0 }} block {{ else }} hidden {{/if}}" id="tab{{index}}">
-            <div class="flex items-center justify-center gap-5 rounded-md bg-gradient-to-t px-10">
+            <div class="flex sm:flex-row flex-col items-center justify-center gap-5 rounded-md bg-gradient-to-t px-10">
                 <section class="whoweare-t flex h-[20rem] w-1/2 items-center justify-center">
                     <img src="{{image}}" class="max-w-[354px] max-h-[207]" alt="CDC LOGO" />
                 </section>
-                <section class="w-1/2">
+                <section class="sm:w-1/2 w-full">
                     <h2 class="text-2xl font-bold">{{ name }}</h2>
                     <div class="flex flex-col gap-10 pt-10">
                         <div>
@@ -37,8 +36,8 @@
         </div>
         {{ else }}
         <div class="tab-content p-4   {{ if index == 0 }} block {{ else }} hidden {{/if}}" id="tab{{index}}">
-            <div class="flex items-center justify-center gap-5 rounded-md bg-gradient-to-t px-10">
-                <section class="w-1/2">
+            <div class="flex sm:flex-row flex-col items-center justify-center gap-5 rounded-md bg-gradient-to-t px-10">
+                <section class="sm:w-1/2 w-full">
                     <h2 class="text-2xl font-bold">{{ name }}</h2>
                     <div class="flex flex-col gap-10 pt-10">
                         <div>
