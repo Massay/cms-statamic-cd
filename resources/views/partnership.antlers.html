@@ -4,48 +4,82 @@
 			<h1 class="title-font mb-4 font-bold tracking-wide  text-white sm:text-3xl md:text-3xl">
 				{{ header_title }}
 			</h1>
-			<p
-				class="md:text-md lg:text-md mb-6 max-w-2xl font-light text-gray-200 dark:text-gray-400 lg:mb-8"
-			>
+			<p class="md:text-md lg:text-md mb-6 max-w-2xl font-light text-gray-200 dark:text-gray-400 lg:mb-8">
 				{{ header_description }}
 			</p>
 			<div class="">
 				{{ if link_field}}
-				<a
-				
-					href="/{{ link_field }}"
-					class="shadow-glass hover:to-bluw-500 relative flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-green-300 to-green-500 px-5 py-3 text-[16px] font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4"
-				>
+				<a href="/{{ link_field }}"
+					class="shadow-glass hover:to-bluw-500 relative flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-green-300 to-green-500 px-5 py-3 text-[16px] font-medium capitalize text-white transition duration-300 hover:scale-105 hover:from-green-500 md:px-8 md:py-4">
 					{{ link_field }}
 					<span
-						class="from-orange -400 absolute right-0 top-0 h-3 w-3 animate-ping rounded-full bg-gradient-to-r to-green-700"
-					></span>
+						class="from-orange -400 absolute right-0 top-0 h-3 w-3 animate-ping rounded-full bg-gradient-to-r to-green-700"></span>
 				</a>
 				{{ /if}}
 			</div>
 		</div>
 
 		<div class="flex h-96 items-center justify-center">
-			<img
-				class="h-full rounded-md object-cover"
-				src="{{ primary_image }}"
-				alt="apple watch"
-			/>
+			<img class="h-full rounded-md object-cover" src="{{ primary_image }}" alt="apple watch" />
 		</div>
 	</div>
 </section>
+<div>
+	<div class="flex flex-col items-center justify-center pb-5">
+		<h2 class="text-2xl font-bold">Partnership Tiers</h2>
+		<p class="max-w-4xl text-center text-sm">
+			We offer three distinct partnership tiers, each designed to provide different levels of
+			engagement and benefits. Choose the tier that best aligns with your organisation’s goals and
+			resources.
+		</p>
+	</div>
+
+	<div class="flex justify-center items-center w-full">
+		{{ partial:partnership/tabs}}
+
+	</div>
 
 
+
+</div>
+
+
+<div class="flex items-center justify-center px-28 py-10">
+	<div class="relative flex w-full flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+		<div
+			class="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+			<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt=""
+				class="h-full w-full object-cover" />
+		</div>
+		<div class="p-6">
+			<h4 class="mb-2 block font-sans text-2xl font-bold">Let’s Make an Impact Together.</h4>
+			<p class="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+				At CDC, we value the contributions of our partners and are committed to creating
+				partnerships that drive mutual success. Join us in shaping the future of career development
+				and making a lasting impact on the lives of individuals worldwide.
+			</p>
+		</div>
+	</div>
+</div>
 
 {{ partial:partnership/list}}
 
 
 
 
+
+
+
+
+{{ partial:partnership/register}}
+
+{{ partial:partnership/register_dp}}
+
+
 <style>
 	.main {
 		background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.61)),
-			url('{{ background_image }}');
+		url('{{ background_image }}');
 		background-size: cover;
 	}
 </style>

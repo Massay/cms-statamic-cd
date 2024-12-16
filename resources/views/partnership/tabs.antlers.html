@@ -1,0 +1,89 @@
+<div class="tabs" class="w-full">
+
+
+    <div class="w-full sm:max-w-3xl mx-auto">
+        <div class="flex items-center justify-center gap-5 rounded-full border-2 border-green-500 p-2" id="tab-buttons">
+            {{ collection:partnership_tiers}}
+            <button
+                class="tab-btn py-2 px-4 text-gray-600 rounded-full  border-transparent {{ if index == 0 }} active bg-emerald-400 {{/if}} hover:border-blue-600  "
+                data-tab="tab{{index}}">{{ name }}</button>
+
+            {{ /collection:partnership_tiers}}
+        </div>
+    </div>
+
+
+
+    <!-- Tab Content -->
+    <div id="tab-contents">
+        {{ collection:partnership_tiers}}
+        {{ if index % 2 == 0 }}
+        <div class="tab-content p-4   {{ if index == 0 }} block {{ else }} hidden {{/if}}" id="tab{{index}}">
+            <div class="flex items-center justify-center gap-5 rounded-md bg-gradient-to-t px-10">
+                <section class="whoweare-t flex h-[20rem] w-1/2 items-center justify-center">
+                    <img src="{{image}}" class="max-w-[354px] max-h-[207]" alt="CDC LOGO" />
+                </section>
+                <section class="w-1/2">
+                    <h2 class="text-2xl font-bold">{{ name }}</h2>
+                    <div class="flex flex-col gap-10 pt-10">
+                        <div>
+                            <p class="mb-2 text-sm">
+                                {{ content }}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        {{ else }}
+        <div class="tab-content p-4   {{ if index == 0 }} block {{ else }} hidden {{/if}}" id="tab{{index}}">
+            <div class="flex items-center justify-center gap-5 rounded-md bg-gradient-to-t px-10">
+                <section class="w-1/2">
+                    <h2 class="text-2xl font-bold">{{ name }}</h2>
+                    <div class="flex flex-col gap-10 pt-10">
+                        <div>
+                            <p class="mb-2 text-sm">
+                                {{ content }}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="whoweare-t flex h-[20rem] w-1/2 items-center justify-center">
+                    <img src="{{image}}" class="max-w-[354px] max-h-[207]" alt="CDC LOGO" />
+                </section>
+            </div>
+        </div>
+      
+
+        {{ /if}}
+
+        {{ /collection:partnership_tiers}}
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        // Add click event to each tab button
+        tabButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetTab = button.getAttribute("data-tab");
+
+                // Remove active classes from all buttons
+                tabButtons.forEach((btn) =>
+                    btn.classList.remove("active", "border-blue-600", "text-gray-100", "bg-emerald-400")
+                );
+
+                // Hide all tab contents
+                tabContents.forEach((content) => content.classList.add("hidden"));
+
+                // Add active classes to clicked button and show related tab content
+                button.classList.add("active", "border-gray-100", "bg-emerald-400");
+                document.getElementById(targetTab).classList.remove("hidden");
+            });
+        });
+    });
+</script>
