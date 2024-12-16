@@ -31,3 +31,15 @@ tree:
     id: 41bac0b8-f80f-4744-a1f4-0ea164c69404
     title: 'Our Team'
     url: our-team
+  -
+    id: fbc26456-341a-412b-9a14-ab4fc8fb02ba
+    title: FAQs
+    url: faqs
+  -
+    id: c282a51a-da83-44ba-8b3c-3e2aaffc7c3d
+    title: Community
+    url: community-and-network
+  -
+    id: 70f77e23-b9cd-4319-adc6-45f24cb96daa
+    title: 'Case-study & campaigns'
+    url: compaigns-and-case-studies
