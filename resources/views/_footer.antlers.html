@@ -153,15 +153,19 @@
 				<div>
 					<p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
 
+				
+
 					<div class="mt-5 flex flex-col items-start space-y-2">
-						<a href="/"
-							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">Home</a>
-						<a href="/about"
-							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">Who
-							We Are</a>
-						<a href="#!"
-							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">Our
-							Philosophy</a>
+
+						{{ nav:quick_link}}
+
+						
+						<a href="{{ url }}"
+							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">
+						{{ title }}</a>
+						
+
+							{{ /nav:quick_link}}
 					</div>
 				</div>
 
@@ -169,15 +173,15 @@
 					<p class="font-semibold text-gray-800 dark:text-white">Other Link</p>
 
 					<div class="mt-5 flex flex-col items-start space-y-2">
-						<a href="/"
-							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">Terms
-							and Conditions</a>
-						<a href="/about"
-							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">Who
-							We Are</a>
-						<a href="/cdc-academy"
-							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">Our
-							Courses</a>
+						{{ nav:other_link}}
+
+						
+						<a href="{{ url }}"
+							class="text-gray-600 transition-colors duration-300 hover:text-green-500 hover:underline dark:text-gray-300 dark:hover:text-green-400">
+						{{ title }}</a>
+						
+
+							{{ /nav:other_link}}
 					</div>
 				</div>
 			</div>
