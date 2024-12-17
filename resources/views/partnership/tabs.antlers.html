@@ -4,7 +4,7 @@
         <div class="flex  items-center justify-center sm:gap-5 rounded-full border-2 border-green-500 sm:p-2" id="tab-buttons">
             {{ collection:partnership_tiers}}
             <button
-                class="tab-btn py-2 sm:px-4 max-w-[20%] text-xs px-1 sm:text-lg lg:text-2xl text-gray-600 rounded-full  border-transparent {{ if index == 0 }} active bg-emerald-400 {{/if}} hover:border-blue-600  "
+                class="tab-btn py-2 sm:px-4 max-w-[35%] text-xs px-1 sm:text-lg lg:text-2xl text-gray-600 rounded-full  border-transparent {{ if index == 0 }} active bg-emerald-400 {{/if}} hover:border-blue-600  "
                 data-tab="tab{{index}}">{{ name }}</button>
 
             {{ /collection:partnership_tiers}}

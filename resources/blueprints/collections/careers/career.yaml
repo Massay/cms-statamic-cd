@@ -43,6 +43,15 @@ tabs:
             field:
               type: text
               display: tag
+          -
+            handle: document
+            field:
+              container: documents
+              type: assets
+              display: document
+              max_files: 1
+              min_files: 1
+              listable: true
   sidebar:
     display: Sidebar
     sections:

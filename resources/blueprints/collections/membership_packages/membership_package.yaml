@@ -46,6 +46,11 @@ tabs:
               type: link
               display: Url
               listable: true
+          -
+            handle: has_payment
+            field:
+              type: toggle
+              display: 'Has Payment'
   sidebar:
     display: Sidebar
     sections:

@@ -1,4 +1,4 @@
-title: Blog
+title: Job
 tabs:
   main:
     display: Main
@@ -13,6 +13,12 @@ tabs:
               validate:
                 - required
           -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
             handle: author
             field:
               type: users
@@ -21,25 +27,16 @@ tabs:
               localizable: true
               max_items: 1
           -
-            handle: content
+            handle: url
             field:
-              type: markdown
-              display: Content
-              localizable: true
+              type: link
+              display: url
           -
             handle: template
             field:
               type: template
               display: Template
               localizable: true
-          -
-            handle: image
-            field:
-              max_files: 1
-              min_files: 1
-              container: assets
-              type: assets
-              display: image
   sidebar:
     display: Sidebar
     sections:
@@ -51,9 +48,3 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-          -
-            handle: date
-            field:
-              type: date
-              required: true
-              default: now

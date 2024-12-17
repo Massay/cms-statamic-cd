@@ -11,9 +11,10 @@ resources:
   - 'Special resources'
 author: c6d53093-70a5-4010-bf84-815546e3090f
 updated_by: c6d53093-70a5-4010-bf84-815546e3090f
-updated_at: 1733992142
+updated_at: 1734434164
 is_popular: false
 url_lin: 'https://dev.cdcommunity.org/register'
 url: dev.cdcommunity.org/register
 link_url: 'https://dev.cdcommunity.org/register'
+has_payment: true
 ---

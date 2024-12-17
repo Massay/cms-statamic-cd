@@ -27,7 +27,10 @@
 						<h1
 							class="mb-4 flex items-center border-b border-gray-200 pb-4 text-5xl leading-none text-gray-900"
 						>
-							<span>{{ fee }}</span> <span class="ml-1 text-lg font-normal text-gray-500">/mo</span>
+							<span>{{ fee }}</span> 
+							{{ if has_payment }}
+							<span class="ml-1 text-lg font-normal text-gray-500">/mo</span>
+							{{ /if }}
 						</h1>
 
 						{{ resources}}

@@ -1,4 +1,5 @@
 super: true
+avatar: massaybah.jpeg
 id: c6d53093-70a5-4010-bf84-815546e3090f
 password_hash: $2y$12$hQ7AIFTutv51022Ihx0jyu54UyS/0tZs6P7WsE/9pytGp2dEOVzxa
 preferences:
@@ -14,4 +15,6 @@ preferences:
     courses:
       after_save: create_another
     careers:
+      after_save: create_another
+    news:
       after_save: create_another

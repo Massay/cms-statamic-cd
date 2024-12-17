@@ -1,13 +1,20 @@
 <div class="max-w-7xl mx-auto sm:my-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2  gap-2 sm:gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2  sm:gap-4  gap-3">
         {{ collection:blogs}}
-        <div class="p-8">
-            <!-- <h1>{{ title }}</h1> -->
-            <img src="{{ image }}" alt="" class="overflow-hidden rounded-md">
-            <div class="">
-                <a class="font-extrabold text-gray-500" href="{{ url }}">{{ title}}</a>
-                <!-- <p class="sm:leading-8 text-lg max-h-52">{{ content }} </p> -->
-                <span class="text-gray-900">{{ author:name }}</span>
+        <div class="bg-gray-50 p-4">
+           <div class="h-[400px] w-auto">
+            <img src="{{ image }}" alt="" class=" rounded-md object-fill object-center h-[400px] w-full">
+           </div>
+           <a href="{{ url }}">
+            <h1 class="text-lg font-extrabold py-4 sm:text-2xl text-center">{{ title }}</h1>
+           </a>
+           
+            <div class="flex justify-between items-center">
+               
+               <div class="flex items-center space-x-1">
+                        <img class="h-8 w-8 rounded-full" src="{{ author:avatar }}" alt="">
+                        <span class="text-gray-900">{{ author:name }}124</span>
+               </div>
                 <span class="text-gray-900">{{ date }}</span>
             </div>
         </div>

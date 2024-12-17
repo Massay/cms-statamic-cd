@@ -1,5 +1,16 @@
-title: 'our courses'
+title: Courses
+template: default
+layout: layout
+taxonomies:
+  - tags
 revisions: false
+date: true
+sort_dir: asc
 date_behavior:
   past: public
   future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

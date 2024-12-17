@@ -1,23 +1,23 @@
-<div class="max-w-7xl mx-auto">
-
-    <!-- {{ slug }} -->
-    <h1 class="text-lg font-extrabold py-4 sm:text-2xl text-center">{{ title }}</h1>
-
-    <div class="p-8">
-        <div class="h-[3%] mx-auto w-[60%]">
-            <img src="{{ image }}" alt="" class=" rounded-md object-fill object-center">
-
-            <div>
-
-                <p class="sm:leading-8 text-lg">{{ content }} </p>
-                <span class="text-gray-900">{{ author:name }}</span>
+<div class="max-w-7xl mx-auto min-h-screen">
+    <div class="max-w-3xl mx-auto">
+        <h1 class="text-lg font-extrabold py-4 sm:text-4xl text-center">{{ title }}</h1>
+        <div class="flex justify-center items-center gap-5">
+            <img class="h-10 w-10 rounded-full" src="{{ author:avatar }}" alt="">
+            <div class="flex flex-col">
+                <span class="text-gray-900">{{ author:name }}124</span>
                 <span class="text-gray-900">{{ date }}</span>
             </div>
-
         </div>
-       
-       
+    </div>
 
-    
+    <div class="p-8 ">
+        <div class="h-full">
+            <div class=" max-w-5xl mx-auto">
+                <img src="{{ image }}" alt="" class=" rounded-md object-fill object-center  max-h-full w-full">
+                <div class="mt-2 h-full">
+                   {{content}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
