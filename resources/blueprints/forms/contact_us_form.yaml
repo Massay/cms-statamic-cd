@@ -9,13 +9,19 @@ tabs:
             field:
               type: text
               display: Name
+              validate:
+                - required
           -
             handle: email
             field:
               type: text
               display: Email
+              validate:
+                - required
           -
             handle: message
             field:
               type: textarea
               display: Message
+              validate:
+                - required

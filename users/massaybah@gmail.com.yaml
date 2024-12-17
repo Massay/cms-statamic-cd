@@ -18,3 +18,5 @@ preferences:
       after_save: create_another
     news:
       after_save: create_another
+    program_delivery:
+      after_save: create_another

@@ -1,10 +1,8 @@
-
 <div class="flex items-center justify-center sm:py-10 p-2">
     <div class="max-w-4xl lg:col-start-2 lg:ml-6">
         <div class="flex items-center justify-center">
             <h4
-                class="mt-2 w-fit border-b-2 border-green-500 px-3 pb-2 text-center text-2xl font-bold leading-8 sm:text-2xl sm:leading-9"
-            >
+                class="mt-2 w-fit border-b-2 border-green-500 px-3 pb-2 text-center text-2xl font-bold leading-8 sm:text-2xl sm:leading-9">
                 Program Delivery
             </h4>
         </div>
@@ -12,6 +10,30 @@
             Our program offers a flexible and accessible learning experience, designed to empower you on
             your educational journey. Here are the key features:
         </p>
-        
+
+
+        <div class="accordion w-full max-w-7xl mx-auto flex flex-col gap-1 mt-16">
+            {{ collection:program_delivery}}
+            <div class="accordion-item border-b">
+                <h2 class="accordion-header ">
+                    <label for="section-program-delivery-{{ index }}"
+                        class="accordion-button flex items-center justify-between w-full p-4 text-lg font-semibold text-gray-700 bg-gray-100  rounded-md cursor-pointer">
+                        {{title}}
+                        <svg class="w-5 h-5 transform transition-transform duration-200 rotate-0 group-open:rotate-180"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </label>
+                </h2>
+                <input type="checkbox" id="section-program-delivery-{{ index }}" class="hidden peer" />
+                <div
+                    class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
+                    <p class="p-4 text-gray-600">{{ content}}</p>
+                </div>
+            </div>
+            {{ /collection:program_delivery}}
+        </div>
+
     </div>
 </div>
