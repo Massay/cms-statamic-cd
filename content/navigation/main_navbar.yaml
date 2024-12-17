@@ -1,2 +1,4 @@
 title: 'Main NavBar'
+collections:
+  - pages
 max_depth: 3

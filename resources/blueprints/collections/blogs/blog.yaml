@@ -40,6 +40,12 @@ tabs:
               container: assets
               type: assets
               display: image
+          -
+            handle: date
+            field:
+              type: date
+              display: Date
+              always_save: true
   sidebar:
     display: Sidebar
     sections:
