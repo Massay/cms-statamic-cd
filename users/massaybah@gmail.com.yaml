@@ -20,3 +20,7 @@ preferences:
       after_save: create_another
     program_delivery:
       after_save: create_another
+    reports:
+      after_save: create_another
+    tools:
+      after_save: create_another

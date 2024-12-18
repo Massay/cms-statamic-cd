@@ -4,29 +4,30 @@
 			<h2 class="pb-10 pl-10 text-center sm:text-2xl text-lg font-bold">Policy, reports and press releases</h2>
 	
 			<div class=" flex sm:flex-row flex-col  justify-center sm:gap-5 gap-2 text-gray-500">
+
+				{{ collection:reports}}
 				<div class="flex w-full sm:max-w-[22rem] flex-col  justify-between sm:gap-5 gap-2 p-6 xl:max-w-[28rem]">
 					<section>
 						<img
-							src="https://images.pexels.com/photos/7465697/pexels-photo-7465697.jpeg"
+							src="{{ image}}"
 							alt=""
 							class="w-full"
 						/>
-						<h2 class="sm:text-2xl text-lg font-bold text-black">Policy Briefings, responses and letters</h2>
+						<h2 class="sm:text-2xl text-lg font-bold text-black">{{ title}}</h2>
 						<p class="pt-5">
-							Sponsored by the U.S. Department of Labour, this free job quiz will help you identify
-							where your career interests lie and then point you toward career paths that might feed
-							those interests.
+							{{content}}
 						</p>
 					</section>
 					<a
-						href="https://www.mynextmove.org/"
+						href="{{url}}"
 						target="_blank"
 						class="w-full rounded-full bg-green-500 p-2 text-center sm:text-2xl text-lg text-white"
 						>View Papers</a
 					>
 				</div>
+				{{ /collection:reports}}
 	
-				<div class="flex w-full max-w-[22rem] flex-col justify-between gap-5 p-6 xl:max-w-[28rem]">
+				<!-- <div class="flex w-full max-w-[22rem] flex-col justify-between gap-5 p-6 xl:max-w-[28rem]">
 					<section>
 						<img
 							src="https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg"
@@ -46,9 +47,9 @@
 						class="w-full rounded-full bg-green-500 p-2 text-center sm:text-2xl text-lg text-white"
 						>View Reports</a
 					>
-				</div>
+				</div> -->
 	
-				<div class="flex w-full max-w-[22rem] flex-col justify-between gap-5 p-6 xl:max-w-[28rem]">
+				<!-- <div class="flex w-full max-w-[22rem] flex-col justify-between gap-5 p-6 xl:max-w-[28rem]">
 					<section>
 						<img
 							src="https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg"
@@ -89,7 +90,7 @@
 						target="_blank"
 						class="w-full rounded-full bg-green-500 p-2 text-center sm:text-2xl text-lg text-white">View More</a
 					>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

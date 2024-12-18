@@ -24,101 +24,30 @@
 				>
 			</div>
 
-			<div class="flex w-full max-w-[45rem] flex-col justify-between gap-5 p-6">
-				<section>
-					<img
-						src="https://images.pexels.com/photos/6169027/pexels-photo-6169027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-						alt=""
-						class="w-full"
-					/>
-					<h2 class="text-2xl font-bold text-black">123Test.com: career aptitude test</h2>
-					<p class="pt-5">
-						Rather than answer questions on a sliding scale of agree or disagree, this free career
-						test shows four photos (each picture depicts work associated with a specific type of
-						personality), and you choose both your favourite and least favourite illustrated
-						activity.
-					</p>
-				</section>
-				<a
-					href="https://www.123test.com/career-test/"
-					target="_blank"
-					class="w-full rounded-full bg-green-500 p-2 text-center text-2xl text-white">Learn More</a
-				>
-			</div>
+
+			{{ collection:tools}}
 
 			<div class="flex w-full max-w-[45rem] flex-col justify-between gap-5 p-6">
 				<section>
 					<img
-						src="https://images.pexels.com/photos/5717265/pexels-photo-5717265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+						src="{{ image}}"
 						alt=""
 						class="w-full"
 					/>
-					<h2 class="text-2xl font-bold text-black">
-						What career is right for me?: career aptitude test
-					</h2>
+					<h2 class="text-2xl font-bold text-black">{{ title }}</h2>
 					<p class="pt-5">
-						What is unique about this test’s approach is that you’re asked to rank your skill set,
-						interests, work style, and values, plus say how much money you’d like to make, what
-						education requirements you’re looking to meet, and how much potential growth you’d like
-						to see in your career field.
+						{{content}}
 					</p>
 				</section>
 				<a
-					href="https://whatcareerisrightforme.com/career-aptitude-test.php"
-					target="_blank"
+					href="{{ url }}"
 					class="w-full rounded-full bg-green-500 p-2 text-center text-2xl text-white">Learn More</a
 				>
 			</div>
 
-			<div class="flex w-full max-w-[45rem] flex-col justify-between gap-5 p-6">
-				<section>
-					<img
-						src="https://images.pexels.com/photos/5989928/pexels-photo-5989928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-						alt=""
-						class="w-full"
-					/>
-					<h2 class="text-2xl font-bold text-black">
-						The Myers-Briggs Organisation: MBTI Instrument
-					</h2>
-					<p class="pt-5">
-						Applicable across all areas of your life, the MBTI (Myers-Briggs type indicator) is
-						probably one of the most used assessments by career centres and managers alike. “Many
-						companies use the MB test to evaluate counselling, leadership training, and work-team
-						development qualities.”
-					</p>
-				</section>
-				<a
-					href="https://www.myersbriggs.org/my-mbti-personality-type/take-the-mbti-instrument/home.htm"
-					target="_blank"
-					class="w-full rounded-full bg-green-500 p-2 text-center text-2xl text-white">Learn More</a
-				>
-			</div>
 
-			<div class="flex w-full max-w-[45rem] flex-col justify-between gap-5 p-6">
-				<section>
-					<img
-						src="https://images.pexels.com/photos/5990042/pexels-photo-5990042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-						alt=""
-						class="w-full"
-					/>
-					<h2 class="text-2xl font-bold text-black">Assessment.com: MAPP Career Test</h2>
-					<p class="pt-5">
-						The Motivational Appraisal of Personal Potential (MAPP) test focusses on your likes and
-						dislikes and is designed to be taken quickly so that your answers are based on your
-						instincts rather than letting you overthink things. There are various packages to choose
-						from for more in-depth information, but the free results offer ample insights about
-						career motivations and suggest 10 possible vocational areas for you to check out.
-					</p>
-					<p class="pt-5">
-						Note: While the basic results are free, you will have to pay to see your full report.
-					</p>
-				</section>
-				<a
-					href="https://www.myersbriggs.org/my-mbti-personality-type/take-the-mbti-instrument/home.htm"
-					target="_blank"
-					class="w-full rounded-full bg-green-500 p-2 text-center text-2xl text-white">Learn More</a
-				>
-			</div>
+			{{ /collection:tools}}
+			
 		</div>
 	</div>
 </div>

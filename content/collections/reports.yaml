@@ -1,8 +1,8 @@
-title: News
-template: news/show
+title: Reports
+template: reports/show
 layout: layout
 revisions: false
-route: '/news-and-events/{slug}'
+route: '/reports/{slug}'
 date: true
 sort_dir: asc
 date_behavior:

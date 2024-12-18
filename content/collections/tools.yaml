@@ -1,10 +1,10 @@
-title: News
-template: news/show
+title: Tools
+template: tools/show
 layout: layout
 revisions: false
-route: '/news-and-events/{slug}'
+route: '/tools/{slug}'
 date: true
-sort_dir: asc
+sort_dir: desc
 date_behavior:
   past: public
   future: private
