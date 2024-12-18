@@ -13,11 +13,53 @@ tabs:
               validate:
                 - required
           -
-            handle: content
+            handle: company
             field:
-              type: markdown
-              display: Content
-              localizable: true
+              options:
+                -
+                  key: 1
+                  value: 'Wave Gambia'
+                -
+                  key: 2
+                  value: GRTS
+                -
+                  key: 3
+                  value: 'HEllo World'
+                -
+                  key: 4
+                  value: Prtstine
+                -
+                  key: 5
+                  value: 'BEL AQUA'
+              type: select
+              display: Company
+          -
+            handle: description
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h1
+                - h4
+                - h5
+                - h6
+                - underline
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              remove_empty_nodes: false
+              type: bard
+              display: Description
           -
             handle: author
             field:
@@ -37,6 +79,19 @@ tabs:
               type: template
               display: Template
               localizable: true
+          -
+            handle: due_date
+            field:
+              type: date
+              display: 'Due Date'
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Image
   sidebar:
     display: Sidebar
     sections:
@@ -48,3 +103,11 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

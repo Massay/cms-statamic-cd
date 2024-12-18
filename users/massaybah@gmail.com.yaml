@@ -24,3 +24,5 @@ preferences:
       after_save: create_another
     tools:
       after_save: create_another
+    jobs:
+      after_save: create_another
