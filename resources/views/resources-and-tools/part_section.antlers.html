@@ -1,14 +1,15 @@
-{{ collection:resources_and_tools_part_section}}
+<div class="px-4">
+	{{ collection:resources_and_tools_part_section}}
 
 {{ if index / 2 == 0}}
 <div class="flex items-center justify-center my-14">
 			<div class="flex flex-col p-3 sm:flex-row items-center justify-center sm:gap-5 rounded-md bg-gradient-to-t sm:px-28 sm:py-10">
-				<section class="whoweare-t flex h-[20rem] sm:w-1/2 w-full items-center justify-center">
-					<img src="{{ image }}" alt="CDC LOGO" class="max-h-96" />
+				<section class="flex sm:h-[20rem] sm:w-1/2 w-full items-center justify-center">
+					<img src="{{ image }}" alt="CDC LOGO" class="sm:max-h-96 w-full" />
 				</section>
 				<section class="w-full sm:w-1/2">
 					<h2 class="sm:text-2xl text-lg font-bold">{{ title }}</h2>
-					<div class="flex flex-col sm:gap-10 pt-10">
+					<div class="flex flex-col sm:gap-10 sm:pt-10">
 						<div>
 							<p>
 								{{ content }}
@@ -22,9 +23,8 @@
 {{ else }}
 
 <div class="flex items-center justify-center my-14">
-	<div class="flex flex-col p-3 sm:flex-row items-center justify-center sm:gap-5 rounded-md bg-gradient-to-t sm:px-28 sm:py-10">
-		
-		<section class="w-full sm:w-1/2">
+	<div class="flex flex-col sm:flex-row items-center justify-center sm:gap-5 rounded-md bg-gradient-to-t sm:px-28 sm:py-10">
+		<section class="w-full sm:w-1/2 order-2 sm:order-2">
 			<h2 class="sm:text-2xl text-lg font-bold">{{ title }}</h2>
 			<div class="flex flex-col sm:gap-10 pt-10">
 				<div>
@@ -34,13 +34,13 @@
 				</div>
 			</div>
 		</section>
-		<section class="whoweare-t flex h-[20rem] sm:w-1/2 w-full items-center justify-center">
-			<img src="{{ image }}" alt="CDC LOGO" class="max-h-96" />
+		<section class="flex sm:h-[20rem] sm:w-1/2 w-full items-center justify-center order-1 sm:order-2">
+			<img src="{{ image }}" alt="CDC LOGO" class="sm:max-h-96 w-full" />
 		</section>
 	</div>
-
-
 
 {{ /if }}
 {{ /collection:resources_and_tools_part_section}}
 
+
+</div>
