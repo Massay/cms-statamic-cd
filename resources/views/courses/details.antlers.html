@@ -1,0 +1,32 @@
+<div class="py-12 my-12">
+    <div class="max-w-7xl mx-auto">
+        {{ course}}
+
+        <div class="relative">
+            <img
+                class="w-full rounded-xl"
+                src="{{image}}"
+                alt="Colors"
+            />
+            <p
+                class="absolute top-0 rounded-br-lg rounded-tl-lg bg-green-300 px-3 py-1 font-semibold text-gray-800"
+            >
+                {{ level}}
+
+            </p>
+        </div>
+            <h1 class="text-2xl">{{ title }}</h1>
+            <p>{{ duration }}</p>
+            <p>{{ parts }}</p>
+            <p>{{ language_type }}</p>
+
+            <a
+            target="_blank" href="{{link_url}}"
+               class="mt-4 w-full rounded-full block text-center bg-green-600 py-2 text-xl text-white shadow-lg"
+           >
+              Buy Course
+       </a>
+        {{ /course}}
+    </div>
+
+</div>

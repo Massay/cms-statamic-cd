@@ -1,4 +1,4 @@
-title: otherpages
+title: 'Course Category'
 tabs:
   main:
     display: Main
@@ -13,39 +13,33 @@ tabs:
               validate:
                 - required
           -
-            handle: header_title
-            field:
-              type: text
-              display: header_title
-          -
-            handle: header_description
-            field:
-              type: textarea
-              display: 'header description'
-              sortable: false
-          -
-            handle: background_image
-            field:
-              max_files: 1
-              min_files: 1
-              container: assets
-              type: assets
-              display: 'background image'
-          -
-            handle: primary_image
-            field:
-              max_files: 1
-              min_files: 1
-              container: assets
-              type: assets
-              display: 'Primary Image'
-          -
             handle: author
             field:
-              max_items: 1
               type: users
               display: Author
-              always_save: false
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: courses
+            field:
+              collections:
+                - our_courses
+              type: entries
+              display: courses
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: image
+          -
+            handle: template_field
+            field:
+              type: template
+              display: 'Template Field'
   sidebar:
     display: Sidebar
     sections:
@@ -58,11 +52,19 @@ tabs:
               localizable: true
               validate: 'max:200'
           -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
             handle: parent
             field:
               type: entries
               collections:
-                - pages
+                - course_category
               max_items: 1
               listable: false
               localizable: true

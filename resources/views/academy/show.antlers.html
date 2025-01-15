@@ -1,0 +1,22 @@
+<div>
+    {{ if courses | count == 0 }}
+     <div class="">
+        <p class="text-center text-red-400 text-lg">No course found for this {{ slug }}.</p>
+     </div>
+    {{ else }}
+
+    <div
+        class="flex flex-col items-center justify-center gap-5 bg-gradient-to-t from-[#6accaf] to-[#f4fffa] py-10"
+    >
+        <h2 class="text-2xl font-bold">Showing {{ slug }}</h2>
+        <div
+            class="flex flex-wrap justify-center sm:gap-5 space-y-4 sm:px-28 p-4"
+        >
+            {{ courses}}
+            {{ partial:courseCard :course="."}}
+            {{ /courses}}
+        </div>
+    </div>
+
+    {{ /if }}
+</div>

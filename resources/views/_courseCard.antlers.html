@@ -1,0 +1,92 @@
+<div
+class="max-w-sm transform rounded-xl bg-white px-6 pb-2 pt-6 shadow-lg transition duration-500 hover:scale-105"
+>
+<h3 class="mb-3 text-xl font-bold text-green-600">{{level}}</h3>
+<div class="relative">
+    <img
+        class="w-full rounded-xl"
+        src="{{image}}"
+        alt="Colors"
+    />
+    <p
+        class="absolute top-0 rounded-br-lg rounded-tl-lg bg-green-300 px-3 py-1 font-semibold text-gray-800"
+    >
+        {{ level}}
+
+    </p>
+</div>
+<a href="/courses/details/{{slug}}">
+    <h1
+    class="mt-4 cursor-pointer text-2xl font-bold text-gray-800"
+>
+    {{title }}
+</h1>
+</a>
+
+<div class="my-4">
+    <div class="flex items-center space-x-1">
+        <span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="mb-1.5 h-6 w-6 text-green-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+            </svg>
+        </span>
+        <p>{{ duration }}</p>
+    </div>
+    <div class="flex items-center space-x-1">
+        <span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="mb-1.5 h-6 w-6 text-green-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+            </svg>
+        </span>
+        <p>{{ parts }}</p>
+    </div>
+    <div class="flex items-center space-x-1">
+        <span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="mb-1.5 h-6 w-6 text-green-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+            </svg>
+        </span>
+        <p>{{ language_type }}</p>
+    </div>
+
+    <a
+     target="_blank" href="{{link_url}}"
+        class="mt-4 w-full rounded-full block text-center bg-green-600 py-2 text-xl text-white shadow-lg"
+    >
+       Buy Course
+</a>
+</div>
+</div>
